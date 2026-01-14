@@ -180,15 +180,12 @@ export const InvitationDetails: React.FC = () => {
                 <div className="flex flex-col items-center gap-4 font-sans">
                     <div className="flex flex-col items-center">
                         <span className="text-wedding-red font-bold text-xl sm:text-2xl">{WEDDING_DATA.ceremony.time}</span>
-                        <span className="text-xs text-gray-500 uppercase">Giờ</span>
                     </div>
                     <div className="flex flex-col items-center">
                         <span className="text-wedding-gold font-bold text-base sm:text-lg">Thứ Bảy</span>
-                        <span className="text-xs text-gray-500 uppercase">Ngày trong tuần</span>
                     </div>
                     <div className="flex flex-col items-center px-4">
                         <span className="text-red-600 font-bold text-base sm:text-lg">{WEDDING_DATA.ceremony.displayDate}</span>
-                        <span className="text-xs text-gray-500 uppercase">Ngày</span>
                     </div>
                     <div className="flex flex-col items-center px-4 mt-2">
                         <span className="font-bold text-center text-sm sm:text-base break-words max-w-full text-wedding-red">{WEDDING_DATA.ceremony.address}</span>
@@ -221,15 +218,12 @@ export const InvitationDetails: React.FC = () => {
                     <div className="flex flex-col items-center gap-4 py-4 border-t border-b border-gray-100">
                        <div className="text-center">
                           <p className="text-wedding-red font-bold text-2xl sm:text-3xl">{WEDDING_DATA.reception.time}</p>
-                          <p className="text-xs text-gray-500 uppercase">Giờ đón khách</p>
                        </div>
                        <div className="text-center">
                           <p className="text-wedding-gold font-bold text-xl sm:text-2xl">Thứ Bảy</p>
-                          <p className="text-xs text-gray-500 uppercase">Ngày trong tuần</p>
                        </div>
                        <div className="text-center">
                           <p className="text-red-600 font-bold text-xl sm:text-2xl">{WEDDING_DATA.reception.displayDate}</p>
-                          <p className="text-xs text-gray-500 uppercase">Ngày</p>
                        </div>
                     </div>
 
