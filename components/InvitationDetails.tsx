@@ -168,8 +168,8 @@ export const InvitationDetails: React.FC = () => {
             {/* Lễ Vu Quy - Tư Gia */}
             <motion.div
               variants={itemVariants}
-              className="shadow-xl rounded-sm border border-wedding-gold/30 text-center relative z-10"
-              style={{ backgroundColor: '#fefefe', padding: '2rem' }}
+              className="shadow-xl rounded-sm text-center relative z-10"
+              style={{ backgroundColor: '#fefefe', padding: '2rem', border: '2px solid #60a5fa' }}
             >
                 <div className="flex items-center justify-center mb-6">
                    <Home className="text-wedding-gold w-8 h-8" />
@@ -200,8 +200,8 @@ export const InvitationDetails: React.FC = () => {
             {/* Lễ Thành Hôn - Tiệc Cưới */}
             <motion.div
               variants={itemVariants}
-              className="shadow-2xl rounded-sm border-2 border-wedding-red/20 text-center relative z-10 transform md:scale-105"
-              style={{ backgroundColor: '#fefefe', padding: '2rem' }}
+              className="shadow-2xl rounded-sm text-center relative z-10 transform md:scale-105"
+              style={{ backgroundColor: '#fefefe', padding: '2rem', border: '2px solid #60a5fa' }}
             >
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-wedding-red text-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-bold uppercase tracking-wider rounded shadow-lg">
                   Sự kiện chính

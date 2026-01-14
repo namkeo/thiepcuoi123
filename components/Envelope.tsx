@@ -11,10 +11,10 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
   const [isFlapOpen, setIsFlapOpen] = useState(false);
   const [isCardVisible, setIsCardVisible] = useState(false);
 
-  // Pink Theme Colors for the envelope flaps
-  const ENVELOPE_BODY_COLOR = '#e05a74'; // Matching wedding-red
-  const FLAP_COLOR_DARK = '#c03d56'; // Darker shade for depth (bottom flap)
-  const FLAP_COLOR_SIDE = '#cd4b63'; // Mid shade for sides
+  // Blue Theme Colors for the envelope flaps
+  const ENVELOPE_BODY_COLOR = '#60a5fa'; // Light blue
+  const FLAP_COLOR_DARK = '#3b82f6'; // Darker blue for depth (bottom flap)
+  const FLAP_COLOR_SIDE = '#4b9ff5'; // Mid blue for sides
 
   const handleOpen = () => {
     if (isFlapOpen) return;
@@ -30,7 +30,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-pink-50 overflow-hidden">
+    <div className="fixed inset-0 flex items-center justify-center bg-blue-50 overflow-hidden">
       <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1519225468359-2996515c9dc4?q=80&w=2000&auto=format&fit=crop"
@@ -47,7 +47,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
           className="relative w-[350px] sm:w-[500px] h-[250px] sm:h-[350px]"
         >
           {/* Envelope Body (Back) */}
-          <div className="absolute inset-0 bg-wedding-red shadow-2xl rounded-lg"></div>
+          <div className="absolute inset-0 shadow-2xl rounded-lg" style={{ backgroundColor: ENVELOPE_BODY_COLOR }}></div>
 
           {/* Invitation Card (Hidden inside initially) */}
           <motion.div
@@ -138,7 +138,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
             animate={{ rotateX: isFlapOpen ? 180 : 0, zIndex: isFlapOpen ? 0 : 30 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
-             <div className="w-0 h-0 mx-auto border-l-[175px] border-r-[175px] border-t-[140px] border-l-transparent border-r-transparent border-t-wedding-red sm:border-l-[250px] sm:border-r-[250px] sm:border-t-[190px]"></div>
+             <div className="w-0 h-0 mx-auto border-l-[175px] border-r-[175px] border-t-[140px] border-l-transparent border-r-transparent sm:border-l-[250px] sm:border-r-[250px] sm:border-t-[190px]" style={{ borderTopColor: ENVELOPE_BODY_COLOR }}></div>
           </motion.div>
 
           {/* The Seal */}
@@ -156,7 +156,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
              className="absolute -bottom-12 sm:-bottom-12 w-full text-center z-20 px-4"
              animate={{ opacity: isFlapOpen ? 0 : 1 }}
           >
-            <p className="text-wedding-red font-serif italic text-xs sm:text-sm bg-white/50 px-2 sm:px-3 py-1 rounded inline-block shadow max-w-full break-words">Chạm để mở thiệp</p>
+            <p className="text-blue-600 font-serif italic text-xs sm:text-sm bg-white/50 px-2 sm:px-3 py-1 rounded inline-block shadow max-w-full break-words">Chạm để mở thiệp</p>
           </motion.div>
 
         </motion.div>
