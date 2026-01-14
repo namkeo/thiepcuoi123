@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Sparkles, Home, Heart } from 'lucide-react';
+import { MapPin, Sparkles, Home, Heart, ChevronDown } from 'lucide-react';
 import { WEDDING_DATA } from '../types';
 
 export const InvitationDetails: React.FC = () => {
@@ -42,8 +42,12 @@ export const InvitationDetails: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen bg-paper bg-paper-texture overflow-x-hidden w-full"
-      style={{ margin: 0, padding: 0 }}
+      className="min-h-screen overflow-x-hidden w-full"
+      style={{ 
+        margin: 0, 
+        padding: 0,
+        background: 'linear-gradient(135deg, #e0f2f7 0%, #b3e5f0 50%, #e0f2f7 100%)'
+      }}
     >
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col items-center justify-center p-6 text-center">
@@ -79,12 +83,25 @@ export const InvitationDetails: React.FC = () => {
          </motion.div>
          
          <motion.div variants={itemVariants} className="absolute bottom-10 animate-bounce">
-            <Heart className="text-wedding-red fill-wedding-red w-6 h-6 opacity-60" />
+            <ChevronDown className="text-wedding-red w-8 h-8 opacity-40" />
          </motion.div>
       </section>
 
+      {/* Arrow Divider */}
+      <div className="flex justify-center -mt-10 mb-10 relative z-20">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+          className="animate-bounce"
+        >
+          <ChevronDown className="text-wedding-gold w-10 h-10 opacity-50" />
+        </motion.div>
+      </div>
+
       {/* Couple & Parents Section */}
-      <section className="py-20 px-6 bg-wedding-red/5">
+      <section className="py-20 px-6" style={{ backgroundColor: 'rgba(176, 224, 230, 0.3)' }}>
         <motion.div 
           className="max-w-5xl mx-auto"
           initial="hidden"
@@ -125,6 +142,19 @@ export const InvitationDetails: React.FC = () => {
         </motion.div>
       </section>
 
+      {/* Arrow Divider */}
+      <div className="flex justify-center py-8 relative z-20">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+          className="animate-bounce"
+        >
+          <ChevronDown className="text-wedding-gold w-10 h-10 opacity-50" />
+        </motion.div>
+      </div>
+
       {/* Events Details */}
       <section className="py-20 px-6 relative">
          <motion.div 
@@ -138,7 +168,8 @@ export const InvitationDetails: React.FC = () => {
             {/* Lễ Vu Quy - Tư Gia */}
             <motion.div
               variants={itemVariants}
-              className="bg-white p-6 sm:p-8 md:p-10 shadow-xl rounded-sm border border-wedding-gold/30 text-center relative z-10"
+              className="shadow-xl rounded-sm border border-wedding-gold/30 text-center relative z-10"
+              style={{ backgroundColor: '#fefefe', padding: '2rem' }}
             >
                 <div className="flex items-center justify-center mb-6">
                    <Home className="text-wedding-gold w-8 h-8" />
@@ -146,24 +177,31 @@ export const InvitationDetails: React.FC = () => {
                 <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase font-bold">Lễ Vu Quy</h3>
                 <p className="text-sm sm:text-base text-gray-500 italic mb-6">Được cử hành tại Tư Gia</p>
 
-                <div className="flex flex-col items-center gap-4 font-sans text-gray-700">
+                <div className="flex flex-col items-center gap-4 font-sans">
                     <div className="flex flex-col items-center">
-                        <span className="font-bold text-base sm:text-lg">Thứ Bảy</span>
-                        <span className="text-sm sm:text-base">{WEDDING_DATA.ceremony.displayDate}</span>
+                        <span className="text-wedding-red font-bold text-xl sm:text-2xl">{WEDDING_DATA.ceremony.time}</span>
+                        <span className="text-xs text-gray-500 uppercase">Giờ</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <span className="text-base sm:text-lg font-bold">{WEDDING_DATA.ceremony.time}</span>
+                        <span className="text-wedding-gold font-bold text-base sm:text-lg">Thứ Bảy</span>
+                        <span className="text-xs text-gray-500 uppercase">Ngày trong tuần</span>
                     </div>
                     <div className="flex flex-col items-center px-4">
-                        <span className="font-bold text-center text-sm sm:text-base break-words max-w-full">{WEDDING_DATA.ceremony.address}</span>
+                        <span className="text-red-600 font-bold text-base sm:text-lg">{WEDDING_DATA.ceremony.displayDate}</span>
+                        <span className="text-xs text-gray-500 uppercase">Ngày</span>
+                    </div>
+                    <div className="flex flex-col items-center px-4 mt-2">
+                        <span className="font-bold text-center text-sm sm:text-base break-words max-w-full text-wedding-red">{WEDDING_DATA.ceremony.address}</span>
+                        <span className="text-xs text-gray-500 uppercase mt-1">Địa chỉ</span>
                     </div>
                 </div>
             </motion.div>
 
-            {/* Lễ Vu Quy - Tiệc Cưới */}
+            {/* Lễ Thành Hôn - Tiệc Cưới */}
             <motion.div
               variants={itemVariants}
-              className="bg-white p-6 sm:p-8 md:p-10 shadow-2xl rounded-sm border-2 border-wedding-red/20 text-center relative z-10 transform md:scale-105"
+              className="shadow-2xl rounded-sm border-2 border-wedding-red/20 text-center relative z-10 transform md:scale-105"
+              style={{ backgroundColor: '#fefefe', padding: '2rem' }}
             >
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-wedding-red text-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-bold uppercase tracking-wider rounded shadow-lg">
                   Sự kiện chính
@@ -171,23 +209,27 @@ export const InvitationDetails: React.FC = () => {
                 <div className="flex items-center justify-center mb-6 mt-4">
                    <Sparkles className="text-wedding-gold w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase font-bold">Lễ Vu Quy</h3>
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase font-bold">Lễ Thành Hôn</h3>
                 <p className="text-sm sm:text-base text-gray-500 italic mb-8 px-4">Kính mời quý khách tới tham dự bữa tiệc thân mật</p>
 
                 <div className="space-y-6">
                     <div className="px-4">
-                      <h4 className="text-lg sm:text-xl font-bold text-gray-800 break-words">{WEDDING_DATA.reception.venue}</h4>
+                      <h4 className="text-lg sm:text-xl font-bold text-wedding-red break-words">{WEDDING_DATA.reception.venue}</h4>
                       <p className="text-sm sm:text-base text-gray-600 mt-1 break-words">{WEDDING_DATA.reception.address}</p>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 py-4 border-t border-b border-gray-100">
+                    <div className="flex flex-col items-center gap-4 py-4 border-t border-b border-gray-100">
                        <div className="text-center">
-                          <p className="text-wedding-red font-bold text-xl sm:text-2xl">{WEDDING_DATA.reception.time}</p>
-                          <p className="text-xs text-gray-500 uppercase">Đón khách</p>
+                          <p className="text-wedding-red font-bold text-2xl sm:text-3xl">{WEDDING_DATA.reception.time}</p>
+                          <p className="text-xs text-gray-500 uppercase">Giờ đón khách</p>
                        </div>
                        <div className="text-center">
-                          <p className="text-wedding-red font-bold text-xl sm:text-2xl">{WEDDING_DATA.reception.displayDate}</p>
-                          <p className="text-xs text-gray-500 uppercase">Thứ Bảy</p>
+                          <p className="text-wedding-gold font-bold text-xl sm:text-2xl">Thứ Bảy</p>
+                          <p className="text-xs text-gray-500 uppercase">Ngày trong tuần</p>
+                       </div>
+                       <div className="text-center">
+                          <p className="text-red-600 font-bold text-xl sm:text-2xl">{WEDDING_DATA.reception.displayDate}</p>
+                          <p className="text-xs text-gray-500 uppercase">Ngày</p>
                        </div>
                     </div>
 
