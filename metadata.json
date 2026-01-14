@@ -1,0 +1,7 @@
+{
+  "name": "Floral Red Wedding Invite",
+  "description": "A digital wedding invitation with an interactive envelope opening experience and AI-assisted guest wishes.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
