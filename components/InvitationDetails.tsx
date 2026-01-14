@@ -55,7 +55,7 @@ export const InvitationDetails: React.FC = () => {
            <motion.div className="flex flex-col items-center">
              <motion.h2
                variants={itemVariants}
-               className="font-serif text-wedding-red uppercase text-xs sm:text-sm md:text-base mb-4 text-center"
+               className="font-serif text-wedding-red uppercase text-xs sm:text-sm md:text-base mb-4 text-center font-bold"
              >
                Lễ Vu Quy
              </motion.h2>
@@ -151,7 +151,7 @@ export const InvitationDetails: React.FC = () => {
                 <div className="flex items-center justify-center mb-6">
                    <Home className="text-wedding-gold w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase">Lễ Vu Quy</h3>
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase font-bold">Lễ Vu Quy</h3>
                 <p className="text-sm sm:text-base text-gray-500 italic mb-6">Được cử hành tại Tư Gia</p>
 
                 <div className="flex flex-col items-center gap-4 font-sans text-gray-700">
@@ -160,7 +160,7 @@ export const InvitationDetails: React.FC = () => {
                         <span className="text-sm sm:text-base">{WEDDING_DATA.ceremony.displayDate}</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <span className="text-base sm:text-lg">{WEDDING_DATA.ceremony.time}</span>
+                        <span className="text-base sm:text-lg font-bold">{WEDDING_DATA.ceremony.time}</span>
                     </div>
                     <div className="flex flex-col items-center px-4">
                         <span className="font-bold text-center text-sm sm:text-base break-words max-w-full">{WEDDING_DATA.ceremony.address}</span>
@@ -179,7 +179,7 @@ export const InvitationDetails: React.FC = () => {
                 <div className="flex items-center justify-center mb-6 mt-4">
                    <Sparkles className="text-wedding-gold w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase">Lễ Vu Quy</h3>
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase font-bold">Lễ Vu Quy</h3>
                 <p className="text-sm sm:text-base text-gray-500 italic mb-8 px-4">Kính mời quý khách tới tham dự bữa tiệc thân mật</p>
 
                 <div className="space-y-6">
