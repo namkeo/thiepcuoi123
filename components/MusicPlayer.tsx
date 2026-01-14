@@ -6,10 +6,11 @@ export const MusicPlayer: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Beautiful piano instrumental
-    audioRef.current = new Audio("https://cdn.pixabay.com/audio/2022/03/10/audio_5172e27c66.mp3");
+    // Beautiful in White - Westlife (Wedding Song)
+    // Using a free wedding music alternative
+    audioRef.current = new Audio("https://cdn.pixabay.com/audio/2023/10/03/audio_c8dbda00a3.mp3");
     audioRef.current.loop = true;
-    audioRef.current.volume = 0.5;
+    audioRef.current.volume = 0.4;
 
     return () => {
       if (audioRef.current) {

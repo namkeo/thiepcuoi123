@@ -57,11 +57,10 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
             className="absolute left-4 right-4 top-2 bottom-2 bg-paper shadow-md flex flex-col items-center justify-center z-10 rounded border-2 border-wedding-gold"
           >
              <div className="border border-wedding-gold/20 p-2 w-full h-full flex flex-col items-center justify-center text-center bg-white">
-                {/* Large Song Hỷ Symbol as requested */}
+                {/* Large Song Hỷ Symbol */}
                 <div className="flex flex-col items-center justify-center h-full">
-                    <div className="text-wedding-red text-8xl md:text-9xl font-serif select-none mb-4 leading-none filter drop-shadow-md">囍</div>
-                    <p className="font-script text-3xl text-wedding-red/80">Song Hỷ</p>
-                    <p className="font-serif text-gray-400 text-[10px] uppercase tracking-[0.3em] mt-2">Trân trọng kính mời</p>
+                    <div className="text-wedding-red text-9xl md:text-[12rem] font-serif select-none leading-none filter drop-shadow-md">囍</div>
+                    <p className="font-serif text-gray-400 text-xs uppercase tracking-[0.3em] mt-6">Trân trọng kính mời</p>
                 </div>
              </div>
           </motion.div>
