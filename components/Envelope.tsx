@@ -30,16 +30,16 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-pink-50 p-4 overflow-hidden relative">
+    <div className="fixed inset-0 flex items-center justify-center bg-pink-50 overflow-hidden">
       <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1519225468359-2996515c9dc4?q=80&w=2000&auto=format&fit=crop" 
-            alt="Background" 
+          <img
+            src="https://images.unsplash.com/photo-1519225468359-2996515c9dc4?q=80&w=2000&auto=format&fit=crop"
+            alt="Background"
             className="w-full h-full object-cover opacity-20 blur-sm"
           />
       </div>
 
-      <div className="relative z-10 perspective-1000 cursor-pointer" onClick={handleOpen}>
+      <div className="relative z-10 perspective-1000 cursor-pointer p-4" onClick={handleOpen}>
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -60,7 +60,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
                 {/* Large Song Hỷ Symbol */}
                 <div className="flex flex-col items-center justify-center h-full">
                     <div className="text-wedding-red text-9xl md:text-[12rem] font-serif select-none leading-none filter drop-shadow-md">囍</div>
-                    <p className="font-serif text-gray-400 text-xs uppercase tracking-[0.3em] mt-6">Trân trọng kính mời</p>
+                    <p className="font-serif text-gray-400 text-xs uppercase tracking-wider mt-6 text-center">Trân trọng kính mời</p>
                 </div>
              </div>
           </motion.div>
@@ -153,10 +153,10 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
           </motion.div>
           
           <motion.div
-             className="absolute -bottom-12 w-full text-center z-20"
+             className="absolute -bottom-12 sm:-bottom-12 w-full text-center z-20 px-4"
              animate={{ opacity: isFlapOpen ? 0 : 1 }}
           >
-            <p className="text-wedding-red font-serif italic text-sm bg-white/50 px-3 py-1 rounded inline-block shadow">Chạm để mở thiệp</p>
+            <p className="text-wedding-red font-serif italic text-xs sm:text-sm bg-white/50 px-2 sm:px-3 py-1 rounded inline-block shadow max-w-full break-words">Chạm để mở thiệp</p>
           </motion.div>
 
         </motion.div>
