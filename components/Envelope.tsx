@@ -60,7 +60,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
                 {/* Large Song Hỷ Symbol */}
                 <div className="flex flex-col items-center justify-center h-full">
                     <div className="text-wedding-red text-9xl md:text-[12rem] font-serif select-none leading-none filter drop-shadow-md">囍</div>
-                    <p className="font-serif text-gray-400 text-xs uppercase tracking-wider mt-6 text-center">Trân trọng kính mời</p>
+                    <p className="font-serif text-gray-600 text-xs uppercase tracking-wider mt-6 text-center font-bold">Trân trọng kính mời</p>
                 </div>
              </div>
           </motion.div>

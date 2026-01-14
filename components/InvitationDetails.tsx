@@ -52,22 +52,24 @@ export const InvitationDetails: React.FC = () => {
          <div className="absolute bottom-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-floral-pattern bg-contain bg-no-repeat opacity-80"></div>
 
          <motion.div variants={itemVariants} className="z-10 w-full max-w-4xl mx-auto px-4 flex flex-col items-center">
-           <motion.h2
-             variants={itemVariants}
-             className="font-serif text-wedding-red uppercase text-xs sm:text-sm md:text-base mb-4 text-center w-full"
-           >
-             Lễ Thành Hôn
-           </motion.h2>
-           <motion.h1
-             variants={titleVariants}
-             className="font-script text-wedding-red mb-6 drop-shadow-sm flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full"
-           >
-             <motion.span variants={slideInLeft} className="text-4xl sm:text-5xl md:text-8xl">{WEDDING_DATA.groom}</motion.span>
-             <motion.div variants={itemVariants} className="flex items-center justify-center">
-               <Heart className="text-wedding-red fill-wedding-red w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16" />
-             </motion.div>
-             <motion.span variants={slideInRight} className="text-4xl sm:text-5xl md:text-8xl">{WEDDING_DATA.bride}</motion.span>
-           </motion.h1>
+           <motion.div className="flex flex-col items-center">
+             <motion.h2
+               variants={itemVariants}
+               className="font-serif text-wedding-red uppercase text-xs sm:text-sm md:text-base mb-4 text-center"
+             >
+               Lễ Vu Quy
+             </motion.h2>
+             <motion.h1
+               variants={titleVariants}
+               className="font-script text-wedding-red mb-6 drop-shadow-sm flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4"
+             >
+               <motion.span variants={slideInLeft} className="text-4xl sm:text-5xl md:text-8xl">{WEDDING_DATA.groom}</motion.span>
+               <motion.div variants={itemVariants} className="flex items-center justify-center">
+                 <Heart className="text-wedding-red fill-wedding-red w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16" />
+               </motion.div>
+               <motion.span variants={slideInRight} className="text-4xl sm:text-5xl md:text-8xl">{WEDDING_DATA.bride}</motion.span>
+             </motion.h1>
+           </motion.div>
            <motion.div
              variants={itemVariants}
              className="flex items-center justify-center gap-2 sm:gap-4 text-gray-700 font-serif my-8"
@@ -141,7 +143,7 @@ export const InvitationDetails: React.FC = () => {
            variants={containerVariants}
          >
             
-            {/* Lễ Thành Hôn - Tư Gia */}
+            {/* Lễ Vu Quy - Tư Gia */}
             <motion.div
               variants={itemVariants}
               className="bg-white p-6 sm:p-8 md:p-10 shadow-xl rounded-sm border border-wedding-gold/30 text-center relative z-10"
@@ -149,7 +151,7 @@ export const InvitationDetails: React.FC = () => {
                 <div className="flex items-center justify-center mb-6">
                    <Home className="text-wedding-gold w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase">Lễ Thành Hôn</h3>
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase">Lễ Vu Quy</h3>
                 <p className="text-sm sm:text-base text-gray-500 italic mb-6">Được cử hành tại Tư Gia</p>
 
                 <div className="flex flex-col items-center gap-4 font-sans text-gray-700">
@@ -166,7 +168,7 @@ export const InvitationDetails: React.FC = () => {
                 </div>
             </motion.div>
 
-            {/* Lễ Thành Hôn - Tiệc Cưới */}
+            {/* Lễ Vu Quy - Tiệc Cưới */}
             <motion.div
               variants={itemVariants}
               className="bg-white p-6 sm:p-8 md:p-10 shadow-2xl rounded-sm border-2 border-wedding-red/20 text-center relative z-10 transform md:scale-105"
@@ -177,7 +179,7 @@ export const InvitationDetails: React.FC = () => {
                 <div className="flex items-center justify-center mb-6 mt-4">
                    <Sparkles className="text-wedding-gold w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase">Lễ Thành Hôn</h3>
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-wedding-red mb-2 uppercase">Lễ Vu Quy</h3>
                 <p className="text-sm sm:text-base text-gray-500 italic mb-8 px-4">Kính mời quý khách tới tham dự bữa tiệc thân mật</p>
 
                 <div className="space-y-6">
