@@ -54,16 +54,16 @@ export const InvitationDetails: React.FC = () => {
          <motion.div variants={itemVariants} className="z-10 w-full max-w-4xl mx-auto px-4 flex flex-col items-center">
            <motion.h2
              variants={itemVariants}
-             className="font-serif text-wedding-red uppercase text-xs sm:text-sm md:text-base mb-4 text-center"
+             className="font-serif text-wedding-red uppercase text-xs sm:text-sm md:text-base mb-4 text-center w-full"
            >
              Lễ Thành Hôn
            </motion.h2>
            <motion.h1
              variants={titleVariants}
-             className="font-script text-wedding-red mb-6 drop-shadow-sm flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4"
+             className="font-script text-wedding-red mb-6 drop-shadow-sm flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full"
            >
              <motion.span variants={slideInLeft} className="text-4xl sm:text-5xl md:text-8xl">{WEDDING_DATA.groom}</motion.span>
-             <motion.div variants={itemVariants}>
+             <motion.div variants={itemVariants} className="flex items-center justify-center">
                <Heart className="text-wedding-red fill-wedding-red w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16" />
              </motion.div>
              <motion.span variants={slideInRight} className="text-4xl sm:text-5xl md:text-8xl">{WEDDING_DATA.bride}</motion.span>
